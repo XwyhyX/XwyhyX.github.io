@@ -2271,7 +2271,10 @@ pre code {
   }
 }
 table {
-  background-color: transparent;
+  overflow:scroll;
+  background-color: #FFFFFF;
+  max-height: 50px;
+  
 }
 caption {
   padding-top: 8px;
@@ -2280,7 +2283,13 @@ caption {
   text-align: left;
 }
 th {
-  text-align: left;
+  text-align: center;
+  opacity:0.6;
+}
+
+tr {
+  text-align: center;
+  
 }
 .table {
   width: 100%;
