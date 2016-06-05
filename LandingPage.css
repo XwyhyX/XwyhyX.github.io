@@ -295,6 +295,12 @@ th {
     text-decoration: none;
 }
 
+.scrollit {
+    overflow:scroll;
+    overflow-y:hidden;
+    height:100px;
+}
+
 .glyphicon {
   position: relative;
   top: 1px;
