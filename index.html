@@ -1,112 +1,229 @@
-<html><head>
-        <title>6F Bill Tracker</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script type="text/javascript" src="page.js"></script>
-        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="LandingPage.css" rel="stylesheet" type="text/css">
-    </head><body>
-        <div class="cover">
-            <div class="navbar">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#"><span>johnrei.enriquez</span></a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact Me</a>
-                            </li>
-                        </ul>
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="img/logo.jpg" class="navbar-brand" style="height:100px;width:100px" alt="La Mesa"></img>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html" class="normalyn" >Menu</a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="normalyn">Location</a>
+                    </li>
+						<li>
+                        <a href="services.html" class="normalyn">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="normalyn">Contact Us</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	<!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('img/back.jpg');"></div>
+                <div class="carousel-caption" style="vertical-align:middle">
+					<h1> La <span style="color: RED">Mesa</span> </h1>
+                    <h3></h3>
                 </div>
             </div>
-            <div class="cover-image" style="background-image: url(https://unsplash.imgix.net/photo-1418065460487-3e41a6c84dc5?q=25&amp;fm=jpg&amp;s=127f3a3ccf4356b7f79594e05f6c840e);"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h1>6F Bill Tracker</h1>
-                        <p class="text-inverse">A Django Project for UPSITF</p>
-                        <br>
-                        <br>
-                        <!--Modal Button-->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click Me</button>
-                        <!--Modal Dialog-->
-                        <!-- Modal -->
-                        <div id="myModal" class="modal fade" role="dialog">
-                          <div class="modal-dialog modal-sm">
-
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Good Day!!</h4>
-                              </div>
-                              <div class="modal-body">
-                                <a href="pay.html" class="btn btn-info btn-lg" role="button">Unpaid Bills</a>
-                                <br><br>
-                                <a href="history.html" class="btn btn-info btn-lg" role="button">Bill History</a>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-
-                    </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 2</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
                 </div>
             </div>
         </div>
 
-        <div class="section"><div class="container"><div class="row"><div class="col-md-12"><h1 class="text-center text-primary">The Roomies</h1><p class="text-center"></p></div></div><div class="row"><div class="col-md-4"><img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-frc1/v/t1.0-9/10805611_10152872138657072_2938245820261180630_n.jpg?oh=7864060e5cf2dd6fb5bb7b736348e73b&oe=57DBCD13&__gda__=1472399277_57af4ccff289d96fcb27984679df09ce" class="center-block img-circle img-responsive"><h3 class="text-center">Carl</h3></div><div class="col-md-4"><img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/13240603_1100310900011187_8373599313110808449_n.jpg?oh=aa5810eb65800e36b0b83b0effff9a01&oe=57CE870D" class="center-block img-circle img-responsive"><h3 class="text-center">Kenji</h3></div><div class="col-md-4"><img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/12360096_1078337932177068_1347026721665691667_n.jpg?oh=efb267f2e7e550900cba79f54c3d1bea&oe=57C46C90" class="center-block img-circle img-responsive"><h3 class="text-center">JR</h3></div></div></div></div><div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1 class="text-primary">View All Billing</h1>
-                        <h3>A subtitle</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                            dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                            nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-                            enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-                            felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-                            elementum semper nisi.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
-                    </div>
-                </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="font-size: 118px" class="page-header">
+                    Welcome to the Kitchen!
+                </h1><div style="align:center">
+				<a role="button" href="contact.html" class="btn-custom btn-primary btn-lg center-block" style="text-align:center">Check Menu</a>
+				</div>
+            </div>
+            
+        </div>
+        <!-- /.row -->
+		<section class="featured_dishes">
+		<div class="wrapper">
+			<section class="info">
+				<div class="title">
+					<h3>Featured Dishes</h3>
+				</div>
+			</section>
+
+			<div class="dishes" id="dishes">
+				<article class="col-md-3">
+					<div class="dishe_img">
+						<a href="#"><img style="width:210px;height:200px" src="img/dish1.jpg" alt="" title=""/></a>					
+					</div>
+					<div class="dish_info">
+						<a href="#"><h3>Pork Pork Meal</h3></a><br>
+						<p style="text-align:right">$30</p>
+					</div>
+					
+				</article>
+
+				<article class="col-md-3">
+					<div class="dishe_img">
+						<a href="#"><img style="width:210px;height:200px" src="img/dish2.jpg" alt="" title=""/></a>					
+					</div>
+					<div class="dish_info">
+						<a href="#"><h3>Ginataang Lorem Ipsum</h3></a><br>
+						<p style="text-align:right">$24</p>
+					</div>
+					
+				</article>
+
+				<article class="col-md-3">
+					<div class="dishe_img">
+						<a href="#"><img style="width:210px;height:200px" src="img/dish3.jpg" alt="" title=""/></a>					
+					</div>
+					<div class="dish_info">
+						<a href="#"><h3>Steamed Brown Fox</h3></a><br>
+						<p style="text-align:right">$60</p>
+					</div>
+					
+				</article>	
+				
+				<article class="col-md-3">
+					<div class="dishe_img">
+						<a href="#"><img style="width:210px;height:200px" src="img/dish3.jpg" alt="" title=""/></a>					
+					</div>
+					<div class="dish_info">
+						<a href="#"><h3>Steamed Brown Fox</h3></a><br>
+						<p style="text-align:right">$60</p>
+					</div>
+					
+				</article>	
+
+			</div>
+		</div>
+	</section><!--  end featured_dishes  -->
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Full Width Page
+                    <small>Subheading</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Full Width Page</li>
+                </ol>
             </div>
         </div>
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
+        <!-- /.row -->
 
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4"></div>
-                </div>
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Most of Start Bootstrap's unstyled templates can be directly integrated into the Modern Business template. You can view all of our unstyled templates on our website at <a href="http://startbootstrap.com/template-categories/unstyled">http://startbootstrap.com/template-categories/unstyled</a>.</p>
             </div>
         </div>
+        <!-- /.row -->
 
+        <hr>
 
-</body></html>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
